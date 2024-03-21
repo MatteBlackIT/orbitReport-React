@@ -1,4 +1,8 @@
-h1,
+h1 {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
 p {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   text-align: center;
