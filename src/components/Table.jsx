@@ -1,16 +1,11 @@
-
-
-
+import satData from "./satData";
+import styling from "./styling.css";
 
 const Table = ({ sat }) => {
-  // Check if sat is an array before mapping
-  if (!Array.isArray(sat)) {
-    return null; // or some fallback UI
-  }
 
-  let tableBody = sat.map((data, id) => {
-    let status = data.operational === true ? <td>Active</td> : <td>Inactive</td>;
-  
+  const tableBody = sat.map((data, id) => { //changed satData.map to sat.map
+    let status = data.operational === true ? <td>Active</td> : <td>Inactive</td>
+
     return (
       <tr key={id}>
         <td>{data.name}</td>
@@ -18,9 +13,9 @@ const Table = ({ sat }) => {
         <td>{data.launchDate}</td>
         {status}
       </tr>
-    );
+    )
   });
-  
+
   return (
     <table>
       <thead>
